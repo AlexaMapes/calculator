@@ -1,3 +1,17 @@
+const outputContainer = document.querySelector(".output");
+const output = document.createElement('div');
+output.classList.add("outputNum");
+output.textContent = "";
+outputContainer.appendChild(output);
+
+const numButtons = document.querySelectorAll(".num")
+numButtons.forEach(function(button) {
+    button.addEventListener('click', function() {
+        output.textContent += button.value;
+    })
+})
+
+
 function add(x, y) {
     let result = x + y;
     return result;
