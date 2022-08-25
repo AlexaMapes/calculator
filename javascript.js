@@ -41,7 +41,9 @@ output.classList.add("outputNum");
 output.textContent = "";
 outputContainer.appendChild(output);
 
+let lastNum = 0;
 let currentNum = 0;
+let currentOperation = "";
 
 const numButtons = document.querySelectorAll(".num");
 numButtons.forEach(function(button) {
@@ -53,7 +55,11 @@ numButtons.forEach(function(button) {
 
 const addButton = document.querySelector(".add");
 addButton.addEventListener("click", function() {
-    console.log("add me")
+    lastNum = currentNum;
+    currentNum = 0;
+    currentOperation = "+";
+    output.textContent = "";
+    console.log(lastNum, currentNum, currentOperation);
 });
 
 const subButton = document.querySelector(".subtract");
