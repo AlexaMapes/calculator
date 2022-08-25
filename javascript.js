@@ -54,6 +54,17 @@ output.classList.add("outputNum");
 output.textContent = "";
 outputContainer.appendChild(output);
 
+function checkFit(num) {
+    stringNum = num.toString();
+    if (stringNum.length <= 9) {
+        output.textContent = num;
+    }
+    else {
+        num = num.toFixed(9);
+        output.textContent = num;
+    }
+}
+
 const numButtons = document.querySelectorAll(".num");
 numButtons.forEach(function(button) {
     button.addEventListener("click", function() {
@@ -123,7 +134,7 @@ const equalButton = document.querySelector(".equals");
 equalButton.addEventListener("click", function() {
     result = operate(lastNum, currentOperation, currentNum);
     currentNum = result;
-    output.textContent = result;
+    checkFit(result);
     console.log(lastNum, currentOperation, currentNum);
 })
 
