@@ -1,4 +1,9 @@
 function add(x, y) {
-    let sum = x + y;
-    return sum;
+    let result = x + y;
+    return result;
+}
+
+function subtract(x, y) {
+    let result = x - y;
+    return result;
 }
