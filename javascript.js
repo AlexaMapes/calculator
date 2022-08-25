@@ -1,30 +1,3 @@
-const outputContainer = document.querySelector(".output");
-const output = document.createElement("div");
-output.classList.add("outputNum");
-output.textContent = "";
-outputContainer.appendChild(output);
-
-let currentNum = 0;
-
-const numButtons = document.querySelectorAll(".num");
-numButtons.forEach(function(button) {
-    button.addEventListener("click", function() {
-        output.textContent += button.value;
-        currentNum = output.textContent;
-    })
-})
-
-const addButton = document.querySelector(".add");
-addButton.addEventListener("click", function() {
-    console.log("add me")
-})
-
-const subButton = document.querySelector(".subtract");
-subButton.addEventListener("click", function() {
-    console.log("sub me");
-})
-
-
 function add(x, y) {
     let result = x + y;
     return result;
@@ -61,3 +34,34 @@ function operate(a, operator, b) {
     }
     return operateResult;
 }
+
+const outputContainer = document.querySelector(".output");
+const output = document.createElement("div");
+output.classList.add("outputNum");
+output.textContent = "";
+outputContainer.appendChild(output);
+
+let currentNum = 0;
+
+const numButtons = document.querySelectorAll(".num");
+numButtons.forEach(function(button) {
+    button.addEventListener("click", function() {
+        output.textContent += button.value;
+        currentNum = output.textContent;
+    })
+})
+
+const addButton = document.querySelector(".add");
+addButton.addEventListener("click", function() {
+    console.log("add me")
+})
+
+const subButton = document.querySelector(".subtract");
+subButton.addEventListener("click", function() {
+    console.log("sub me");
+})
+
+const multButton = document.querySelector(".multiply");
+multButton.addEventListener("click", function() {
+    console.log("mult me");
+})
