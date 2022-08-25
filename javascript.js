@@ -19,6 +19,11 @@ addButton.addEventListener("click", function() {
     console.log("add me")
 })
 
+const subButton = document.querySelector(".subtract");
+subButton.addEventListener("click", function() {
+    console.log("sub me");
+})
+
 
 function add(x, y) {
     let result = x + y;
