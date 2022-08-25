@@ -79,17 +79,44 @@ addButton.addEventListener("click", function() {
 
 const subButton = document.querySelector(".subtract");
 subButton.addEventListener("click", function() {
-    console.log("sub me");
+    if (isFirstClick == true) {
+        return 0;
+    }
+    else {
+        lastNum = currentNum;
+        currentNum = 0;
+        currentOperation = "-";
+        output.textContent = "";
+        console.log(lastNum, currentNum, currentOperation);
+    };
 });
 
 const multButton = document.querySelector(".multiply");
 multButton.addEventListener("click", function() {
-    console.log("mult me");
+    if (isFirstClick == true) {
+        return 0;
+    }
+    else {
+        lastNum = currentNum;
+        currentNum = 0;
+        currentOperation = "*";
+        output.textContent = "";
+        console.log(lastNum, currentNum, currentOperation);
+    };
 });
 
 const divButton = document.querySelector(".divide");
 divButton.addEventListener("click", function() {
-    console.log("div me");
+    if (isFirstClick == true) {
+        return 0;
+    }
+    else {
+        lastNum = currentNum;
+        currentNum = 0;
+        currentOperation = "/";
+        output.textContent = "";
+        console.log(lastNum, currentNum, currentOperation);
+    };
 });
 
 const equalButton = document.querySelector(".equals");
