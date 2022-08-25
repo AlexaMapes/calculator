@@ -84,7 +84,6 @@ addButton.addEventListener("click", function() {
         currentNum = 0;
         currentOperation = "+";
         output.textContent = "";
-        console.log(lastNum, currentNum, currentOperation);
     };
 });
 
@@ -98,7 +97,6 @@ subButton.addEventListener("click", function() {
         currentNum = 0;
         currentOperation = "-";
         output.textContent = "";
-        console.log(lastNum, currentNum, currentOperation);
     };
 });
 
@@ -112,7 +110,6 @@ multButton.addEventListener("click", function() {
         currentNum = 0;
         currentOperation = "*";
         output.textContent = "";
-        console.log(lastNum, currentNum, currentOperation);
     };
 });
 
@@ -126,19 +123,28 @@ divButton.addEventListener("click", function() {
         currentNum = 0;
         currentOperation = "/";
         output.textContent = "";
-        console.log(lastNum, currentNum, currentOperation);
     };
 });
 
 const equalButton = document.querySelector(".equals");
 equalButton.addEventListener("click", function() {
+    if ((isFirstClick == true) || (currentOperation == "")) {
+        return 0;
+    }
+    if ((currentOperation == "/") && (currentNum == 0)) {
+        alert("Nah son")
+        return 0;
+    }
     result = operate(lastNum, currentOperation, currentNum);
     currentNum = result;
     checkFit(result);
-    console.log(lastNum, currentOperation, currentNum);
 })
 
 const clearButton = document.querySelector(".clear");
 clearButton.addEventListener("click", function() {
-    console.log("clearMe");
+    currentNum = 0;
+    lastNum = 0;
+    currentOperation = "";
+    output.textContent = "";
+    isFirstClick = true;
 })
