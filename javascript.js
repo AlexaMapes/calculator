@@ -1,14 +1,22 @@
 const outputContainer = document.querySelector(".output");
-const output = document.createElement('div');
+const output = document.createElement("div");
 output.classList.add("outputNum");
 output.textContent = "";
 outputContainer.appendChild(output);
 
-const numButtons = document.querySelectorAll(".num")
+let currentNum = 0;
+
+const numButtons = document.querySelectorAll(".num");
 numButtons.forEach(function(button) {
-    button.addEventListener('click', function() {
+    button.addEventListener("click", function() {
         output.textContent += button.value;
+        currentNum = output.textContent;
     })
+})
+
+const addButton = document.querySelector(".add");
+addButton.addEventListener("click", function() {
+    console.log("add me")
 })
 
 
