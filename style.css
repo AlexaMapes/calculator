@@ -16,6 +16,7 @@ body {
     width: 400px;
     align-items: center;
     background-color: #EEF2FF;
+    gap: 25px;
 }
 
 .display {
@@ -25,6 +26,7 @@ body {
     justify-content: center;
     align-items: center;
     padding: 25px;
+    padding-bottom: 0;
 }
 
 .output {
@@ -33,3 +35,14 @@ body {
     background-color: white;
 }
 
+button {
+    flex: 1;
+}
+
+.row {
+    width: 350px;
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
