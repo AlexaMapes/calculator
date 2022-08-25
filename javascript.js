@@ -7,3 +7,8 @@ function subtract(x, y) {
     let result = x - y;
     return result;
 }
+
+function multiply(x, y) {
+    let result = x * y;
+    return result;
+}
