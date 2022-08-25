@@ -76,3 +76,13 @@ const divButton = document.querySelector(".divide");
 divButton.addEventListener("click", function() {
     console.log("div me");
 });
+
+const equalButton = document.querySelector(".equals");
+equalButton.addEventListener("click", function() {
+    console.log("equalize");
+})
+
+const clearButton = document.querySelector(".clear");
+clearButton.addEventListener("click", function() {
+    console.log("clearMe");
+})
