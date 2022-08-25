@@ -12,3 +12,8 @@ function multiply(x, y) {
     let result = x * y;
     return result;
 }
+
+function divide(x, y) {
+    let result = x / y;
+    return result;
+}
