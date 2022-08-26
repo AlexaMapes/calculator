@@ -18,6 +18,10 @@ body {
     background-color: #EEF2FF;
     gap: 25px;
     padding-bottom: 25px;
+    margin-top: 75px;
+    box-shadow: 5px 5px 20px grey;
+    border-radius: 8px;
+    border: black solid 2px;
 }
 
 .display {
@@ -38,6 +42,8 @@ body {
     justify-content: left;
     align-items: center;
     padding: 10px;
+    border-radius: 8px;
+    border: black solid 2px;
 }
 
 .outputNum {
@@ -46,6 +52,9 @@ body {
 
 button {
     flex: 1;
+    border-radius: 8px;
+    font-size: 25px;
+    border: black solid 2px;
 }
 
 .row {
@@ -54,4 +63,40 @@ button {
     display: flex;
     justify-content: space-between;
     gap: 10px;
+}
+
+.operator {
+    background-color: #818CF8;
+}
+
+.operator:hover {
+    background-color: #5160f5;
+}
+
+.operator:active {
+    background-color: #394af4;
+}
+
+.equals {
+    background-color: #4CAF50;
+}
+
+.equals:hover {
+    background-color: #3d8b40;
+}
+
+.equals:active {
+    background-color: #357a38;
+}
+
+.clear {
+    background-color: #f44336;
+}
+
+.clear:hover {
+    background-color: #ea1c0d;
+}
+
+.clear:active {
+    background-color: #d2190b;
 }
